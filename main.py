@@ -20,7 +20,7 @@ for A in W(open("Coins.json")):
 		try:
 			S.send_active_time(timers=get_timers(),tz=timezone())
 			print(f"{X + 1} - Send Active")
-			#ZZ(15)
+			ZZ(2)
 		except Exception as F:
 			print(F)
 			pass
