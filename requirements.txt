@@ -1,0 +1,4 @@
+samino
+ujson
+requests
+json_minify
