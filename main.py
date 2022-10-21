@@ -22,11 +22,11 @@ W=[{"email":"77-v71@wwjmp.com","password":"GOKU12","device":"42F9649E3437F7D6259
 {"email":"77-62b@wwjmp.com","password":"GOKU12","device":"42E7AFB86D28DAD0D654F0DCCFC2BFBC47D38301EF57D267E384B0AB38EB634C6F9748CD11EFC12509","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICJhODZlYTNjOC05ODVmLTRkYWMtYmI1OS0zNGYxZmM0YThlMDAiLCAiNSI6IDE2NjA2NjMyMzksICI0IjogIjc4LjE1NS42Ni4xNTUiLCAiNiI6IDEwMH3wduQ9hTIUtGO2CF3G3cHGDOOjrg"}]
 for A in W:
 	E,P,D=A["email"],A["password"],A["device"]
-	Ç=Client(deviceId=D)#,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
+	Ç=Client(deviceId=D,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
 	ZZ(15)
 	Ç.login(E,P)
 	print(f"Login To {E}")
-	S=Local(comId=175274808)#,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
+	S=Local(comId=175274808,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
 	for X in range(24):
 		try:
 			S.send_active_time(timers=get_timers(),tz=timezone())
