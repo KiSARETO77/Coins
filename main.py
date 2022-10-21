@@ -13,14 +13,14 @@ def timezone():
 for A in W(open("Coins.json")):
 	E,P,D=A["email"],A["password"],A["device"]
 	Ç=Ç(deviceId=D,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
-	ZZ(15);Ç.login(E,P)
+	Ç.login(E,P)
 	print(f"Login To {E}")
 	S=S(comId=175274808,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
 	for X in range(24):
 		try:
 			S.send_active_time(timers=get_timers(),tz=timezone())
 			print(f"{X + 1} - Send Active")
-			ZZ(2)
+			ZZ(15)
 		except Exception as F:
 			print(F)
 			pass
