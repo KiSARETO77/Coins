@@ -1,37 +1,16 @@
-from samino import Client
-from samino import Local
-from os import system as Z
+import Client
+from ujson import load as A
 from time import sleep as ZZ
-#from X import keep_alive as X
-#from ujson import load as W
-from datetime import datetime
-def get_timers():
-	return [{"start":int(datetime.timestamp(datetime.now())),"end":int(datetime.timestamp(datetime.now()))+300} for _ in range(36)]
-def timezone():
-	timezones ={1: -120, 2: -180, 3: -240, 4: -300, 5: -360, 6: -420, 7: -480, 8: -540, 9: -600, 10: -660, 11: -720, 12: -780, 13: 600, 14: 540, 15: 480, 16: 420, 17: 360, 18: 300, 19: 240, 20: 180, 21: 120, 22: 60, 23: 0}
-	return int(timezones[datetime.utcnow().hour])
-W=[{"email":"77-v71@wwjmp.com","password":"GOKU12","device":"42F9649E3437F7D62598011B72C277B433FA52F68D1526C9B2957C0AA1091992C69B6C6D8AA2247B5A","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICJmYzE0NWI4Yi1iZThmLTQzZDgtOWM5NC1jMzNjOTY3OTM1NTciLCAiNSI6IDE2NjA2MzYxNzAsICI0IjogIjc5LjE0MS4yMzUuNDkiLCAiNiI6IDEwMH3fwX4-1RjE8ae6GdHbMIdeghuDMA"},
-{"email":"77-7dz@wwjmp.com","password":"GOKU12","device":"42CF4C5FEB7488930C4CBCF8AE0A7F92E825F1B9F4A22C23F5AB9B6F65CAE80E0EDAD2D223AE76F313","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICIxNGJiZGFiOS01MDQyLTQ5ODEtODJmZC0xZDEzODhiODRjNDAiLCAiNSI6IDE2NjA2MzYxODYsICI0IjogIjc5LjE0MS4yMzUuNDkiLCAiNiI6IDEwMH3njdazong2hHWBM3yovywr41M6aQ"},
-{"email":"77-jDy@wwjmp.com","password":"GOKU12","device":"426A715E3FE086117E455A458D4F4AB442CB97B4C62B73CABBD610775959A5463AD934CBFA0546A69F","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICIzZTdlNDMwMi0wYTI0LTRhYzUtYjliYi01YTk3MzlhNGI4NGMiLCAiNSI6IDE2NjA2MzYyMDMsICI0IjogIjc5LjE0MS4yMzUuNDkiLCAiNiI6IDEwMH0_X5ckfHBHcYHpOwyb_mzaNMe1SA"},
-{"email":"77-sja@wwjmp.com","password":"GOKU12","device":"422A88BB440AFFC4E3BB6EBE9DBE910DF82DBA0C4304FD068D65F9DDD301D6ABEF01CABE310EECA873","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICIwNjFlOWZkZi0yYzAzLTQwNGEtOGM0My1hNTExZjI0ZGFmOTciLCAiNSI6IDE2NjA2MzYyMTksICI0IjogIjc5LjE0MS4yMzUuNDkiLCAiNiI6IDEwMH0YZak85_XNpw3hcYsYjpy-GPjpNA"},
-{"email":"77-3Gn@wwjmp.com","password":"GOKU12","device":"42ECBB48A3CF372059BB59C5D987204568ECA99124D4DD260285A5A065D92643A7A0678F430DD21509","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICI3YjExMDk2Ny1mYTVkLTRjMjMtOTEwMS05ZmEyY2Y5YThmMTEiLCAiNSI6IDE2NjA2MzYyMzYsICI0IjogIjc5LjE0MS4yMzUuNDkiLCAiNiI6IDEwMH3i1OwISxhhi7DRJWuqSsojB0_BDA"},
-{"email":"77-tVG@wwjmp.com","password":"GOKU12","device":"4215BFDBE970E37738AEBBEB10BEA2F9654335BCBF8B0C619B206F1FACE70D0554367A285B93BAC8D7","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICIyZWQwNzNhNC05YmZiLTQwYmItOGJjNy1jNzUzNGJhNDhmNjkiLCAiNSI6IDE2NjA2NjMxNDYsICI0IjogIjc4LjE1NS42Ni4xNTUiLCAiNiI6IDEwMH0DjLV3KHuy-MqXEUfGgvz3ape07g"},
-{"email":"77-s5p@wwjmp.com","password":"GOKU12","device":"42BA6B1D2F876585CD1FC885576B3CD8F512720323F0FCD7EC58B80A7408A140C3872A365E2EB3847C","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICI5YzI2MTliZC0wOWQ5LTQ5NzEtYTRjZC04YmViN2ZhNTA5MDkiLCAiNSI6IDE2NjA2NjMxNzAsICI0IjogIjc4LjE1NS42Ni4xNTUiLCAiNiI6IDEwMH1kqzMXYX9L9wPFJg8tS1NHDRA24w"},
-{"email":"77-ZdW@wwjmp.com","password":"GOKU12","device":"422D61973702288A2DA45B2AE9AAE182300F7AE3F8C5A756ABE178B26D02EC430709DF694270320FA3","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICI5OTVjMDBlZC1lMjM5LTRhOGItYmQ4MC0xMGNjNGIzM2FlYzUiLCAiNSI6IDE2NjA2NjMxOTMsICI0IjogIjc4LjE1NS42Ni4xNTUiLCAiNiI6IDEwMH0EFjDP9Te4TXCKdR4gtKAQBzaHQw"},
-{"email":"77-vOo@wwjmp.com","password":"GOKU12","device":"42E07B52B3F8DC7C71392C33C9DA6D7A1E0B35D1AF5D0F37F1A21C6A056E1CF94F4485DCE3C8D71C90","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICIxMDVmMmUxYS04YzNjLTQxNTYtYmM3My1mNjAyYjQzNDBkOTQiLCAiNSI6IDE2NjA2NjMyMTgsICI0IjogIjc4LjE1NS42Ni4xNTUiLCAiNiI6IDEwMH1R4JxnVTcDntNiVJv7ERgh0EHrHw"},
-{"email":"77-62b@wwjmp.com","password":"GOKU12","device":"42E7AFB86D28DAD0D654F0DCCFC2BFBC47D38301EF57D267E384B0AB38EB634C6F9748CD11EFC12509","SID":"AnsiMSI6IG51bGwsICIwIjogMiwgIjMiOiAwLCAiMiI6ICJhODZlYTNjOC05ODVmLTRkYWMtYmI1OS0zNGYxZmM0YThlMDAiLCAiNSI6IDE2NjA2NjMyMzksICI0IjogIjc4LjE1NS42Ni4xNTUiLCAiNiI6IDEwMH3wduQ9hTIUtGO2CF3G3cHGDOOjrg"}]
-for A in W:
-	E,P,D=A["email"],A["password"],A["device"]
-	Ç=Client(deviceId=D,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
-	ZZ(15)
-	Ç.login(E,P)
-	print(f"Login To {E}")
-	S=Local(comId=175274808,proxies={"https":"http://dimatjasko10:KWJYs68q@185.112.13.43:2831"})
-	for X in range(24):
-		try:
-			S.send_active_time(timers=get_timers(),tz=timezone())
-			print(f"{X + 1} - Send Active")
-			ZZ(2)
-		except Exception as F:
-			print(F)
-			pass
+while 1:
+	for W in A(open("Coins.json")):
+		E,P,D=W["email"],W["password"],W["device"]
+		Ç=Client.Client(D)
+		Ç.login(E,P)
+		print(f"Login  {E}")
+		for S in range(25):
+			try:
+				Ç.send_active(175274808)
+				print(f"{S + 1} Send Activity");ZZ(15)
+			except Exception as F:
+				print(F)
+				pass
