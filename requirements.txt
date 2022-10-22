@@ -1,5 +1,3 @@
-aiohttp
-samino
-ujson
-requests
 json_minify
+requests
+ujson
