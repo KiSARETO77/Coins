@@ -1,3 +1,4 @@
+samino
 json_minify
 requests
 ujson
