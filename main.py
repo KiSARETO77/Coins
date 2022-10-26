@@ -5,6 +5,6 @@ from os import system as Z
 Ç.login("au-@digdig.org","GOKU12")
 while 0:
 	for X in range(24):
-		Ç.send_activity(7777)
+		Ç.send_active(64112096)
 		print(f"{X + 1} - Send Time")
 		ZZ(360)
